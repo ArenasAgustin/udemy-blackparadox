@@ -15,7 +15,54 @@ p {
   color: #494949;
 }
 
-.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, a {
+input, select, textarea, option {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #060a0f;
+  margin: 5px 0;
+  opacity: 0.5;
+}
+input:hover, input:focus, select:hover, select:focus, textarea:hover, textarea:focus, option:hover, option:focus {
+  opacity: 1;
+  color: #060a0f;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 150px;
+  max-height: 250px;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #060a0f;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: #060a0f;
+  margin: 5px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+button:hover {
+  opacity: 1;
+  background: #060a0f;
+  color: white;
+}
+
+.black {
+  background: black;
+  color: white;
+  opacity: 1;
+}
+.black:hover {
+  background: #f60;
+  border: 1px solid #f60;
+}
+
+.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, a, input, select, textarea, option, button {
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -35,6 +82,7 @@ nav {
   padding: 10px 0;
   position: fixed;
   border-bottom: 1px solid transparent;
+  background: transparent;
   z-index: 100;
 }
 nav .logo img {
@@ -42,7 +90,7 @@ nav .logo img {
 }
 nav ul {
   margin: 0;
-  margin-top: 8px;
+  margin-top: 12px;
   padding: 0;
   text-align: right;
 }
@@ -58,9 +106,10 @@ nav ul li {
   margin: 0 10px;
 }
 nav ul li a {
-  color: rgba(73, 73, 73, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   position: relative;
+  text-transform: uppercase;
 }
 nav ul li a:before {
   content: "";
@@ -90,4 +139,44 @@ nav ul li a:hover:before {
 nav ul li a:hover:after {
   width: 100%;
   background: #060a0f;
+}
+
+#slider {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
+  -o-clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
+}
+
+#slippry {
+  position: relative;
+}
+#slippry h3, #slippry p, #slippry button {
+  position: absolute;
+}
+#slippry p {
+  width: 600px;
+}
+#slippry .white_bg {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+}
+#slippry .left {
+  left: 200px;
+}
+#slippry .right {
+  right: 200px;
+}
+#slippry .top_250 {
+  top: 250px;
+}
+#slippry .top_300 {
+  top: 300px;
+}
+#slippry .top_375 {
+  top: 375px;
+}
+#slippry .top_400 {
+  top: 400px;
 }

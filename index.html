@@ -59,31 +59,72 @@
       href="favicon/favicon.ico?v=2"
     />
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico?v=2" />
+
+    <!-- Slippry slider -->
+    <link rel="stylesheet" href="css/slippry.css" />
   </head>
   <body>
     <!-- NavBar -->
     <nav id="nav">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <a href="https://blackparadox.com/" class="logo">
-                        <img src="images/logo.svg" alt="Logo Blackparadox">
-                    </a>
-                </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3">
+            <a href="https://blackparadox.com/" class="logo">
+              <img src="images/logo.svg" alt="Logo Blackparadox" />
+            </a>
+          </div>
 
-                <div class="col-lg-9">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="portfolio.html">Portafolio</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="col-xl-9">
+            <ul>
+              <li class="linkActive"><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#nosotros">Nosotros</a></li>
+              <li><a href="portfolio.html">Portafolio</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Slider -->
+    <section id="slider">
+      <ul id="slippry">
+        <li>
+          <h3 class="left top_250 white_bg">Tus momentos más especiales</h3>
+          <p class="left top_300 white_bg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+            quod perferendis autem, similique in dolore!
+          </p>
+          <button class="left top_375 black">Escríbenos</button>
+
+          <img src="images/slide_01.jpg" alt="Este es un slide de Slippry" />
+        </li>
+
+        <li>
+          <h3 class="right top_250 white_bg">Lorem ipsum en tu evento</h3>
+          <p class="right top_300 white_bg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Asperiores, quasi aliquid suscipit excepturi vel amet neque sunt
+            doloribus et at!
+          </p>
+          <button class="right top_375 black">Escríbenos</button>
+          <img src="images/slide_02.jpg" alt="Este es un slide de Slippry" />
+        </li>
+
+        <li>
+          <h3 class="left top_250 white_bg">
+            <strong>Blackparadox</strong> lorem ipsum
+          </h3>
+          <p class="left top_300 white_bg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
+            provident odit magnam adipisci, omnis officia veniam aliquid fugiat
+            excepturi repellat nobis non, accusantium blanditiis inventore!
+          </p>
+          <button class="left top_400 black">Contáctanos</button>
+          <img src="images/slide_03.jpg" alt="Este es un slide de Slippry" />
+        </li>
+      </ul>
+    </section>
 
     <!-- Services -->
 
@@ -95,5 +136,19 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Slider Slippry -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/slippry.min.js"></script>
+
+    <!-- Activation & scripts -->
+    <script>
+      $(document).ready(function () {
+        $("#slippry").slippry({
+          captions: false,
+          pager: false,
+        });
+      });
+    </script>
   </body>
 </html>
