@@ -84,6 +84,22 @@ nav
     z-index: 100
     @extend .transitionSlow
 
+    &:hover
+        background: white
+        padding: 25px 0
+        border-bottom: 1px solid transparentize($base, .9)
+
+        .logo
+            img
+                width: 80%
+
+        ul
+            margin-top: 8px
+
+            li
+                a
+                    color: $text
+
     .logo
         img
             width: 100%
