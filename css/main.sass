@@ -74,6 +74,24 @@ button
     text-align: center
     margin: 0 auto
 
+.main-title
+    font-weight: bold
+    font-size: 60px
+    color: $base
+
+.rounded-circle
+    width: 250px
+    height: 250px
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    @extend .transitionSlow
+
+    &:hover
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
+        -o-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
+
 // Navbar
 nav
     width: 100%

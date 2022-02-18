@@ -62,7 +62,7 @@ button:hover {
   border: 1px solid #f60;
 }
 
-.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, a, input, select, textarea, option, button {
+.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, .rounded-circle, a, input, select, textarea, option, button {
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -77,6 +77,25 @@ button:hover {
   margin: 0 auto;
 }
 
+.main-title {
+  font-weight: bold;
+  font-size: 60px;
+  color: #060a0f;
+}
+
+.rounded-circle {
+  width: 250px;
+  height: 250px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.rounded-circle:hover {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  -o-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
 nav {
   width: 100%;
   padding: 10px 0;
@@ -84,6 +103,20 @@ nav {
   border-bottom: 1px solid transparent;
   background: transparent;
   z-index: 100;
+}
+nav:hover {
+  background: white;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(6, 10, 15, 0.1);
+}
+nav:hover .logo img {
+  width: 80%;
+}
+nav:hover ul {
+  margin-top: 8px;
+}
+nav:hover ul li a {
+  color: rgba(73, 73, 73, 0.5);
 }
 nav .logo img {
   width: 100%;
