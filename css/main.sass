@@ -232,3 +232,109 @@ nav
 
     .top_400
         top: 400px
+
+// Footer
+footer
+    margin-top: -60px
+    width: 100%
+    background: $base
+    padding: 70px 0
+    clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 100%, 0 100%)
+    -o-clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 100%, 0 100%)
+    -webkit-clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 100%, 0 100%)
+
+    p
+        margin: 0
+        padding: 0
+
+    .white
+        color: transparentize(white, .6)
+
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+
+        li
+            padding: 0
+            margin: 0
+            color: transparentize(white, .8)
+
+    hr
+        border-radius: 10px
+        background: transparentize(white, .8)
+
+.tumblr
+    position: relative
+    float: left
+    margin: 0
+    padding: 0
+    width: 20%
+    cursor: pointer
+    opacity: .7
+    @extend .transitionSlow
+
+    &:hover
+        opacity: 1
+
+.copy
+    padding: 10px 0
+    background: lighten($base, 1)
+    text-align: left
+
+    p, a
+        margin: 0
+        padding: 0
+        color: transparentize(white, .7)
+
+    a
+        opacity: .5
+        color: $outline
+        @extend .transitionSlow
+
+        &:hover
+            opacity: 1
+
+.social-networks
+    margin-top: 5px
+
+    li
+        display: inline-block
+        position: relative
+        margin: 0px 7px
+        float: left
+        width: 30px
+        height: 30px
+        text-align: center
+        -webkit-transform: rotate(0deg)
+        -ms-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        backface-visibility: hidden
+        cursor: pointer
+        @extend .transitionSlow
+
+        i
+            font-size: 22px
+            color: transparentize(white, .8)
+            -webkit-transform: ratate(0deg) translate(-3px , 3px)
+            -ms-transform: ratate(0deg) translate(-3px , 3px)
+            -o-transform: ratate(0deg) translate(-3px , 3px)
+            transform: ratate(0deg) translate(-3px , 3px)
+            backface-visibility: hidden
+            @extend .transitionSlow
+
+        &:hover
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            -o-transform: rotate(45deg)
+            transform: rotate(45deg)
+            background-color: white
+            backface-visibility: hidden
+
+            i
+                color: $base
+                -webkit-transform: rotate(-45deg) translate(-3px , 3px)
+                -ms-transform: rotate(-45deg) translate(-3px , 3px)
+                -o-transform: rotate(-45deg) translate(-3px , 3px)
+                transform: rotate(-45deg) translate(-3px , 3px)
