@@ -344,6 +344,19 @@
         let dn_width = $(".diamond").width();
 
         $(".diamond").css({ height: dn_width });
+
+        /* Scroll */
+        $(window).scroll(function () {
+          let scroll = $(window).scrollTop();
+
+          if (scroll >= $("#about").offset().top - 300) {
+            $("#nav").addClass("nav-overlay");
+          } else {
+            $("#nav").removeClass("nav-overlay");
+          }
+        });
+
+        $(window).scroll();
       });
     </script>
   </body>

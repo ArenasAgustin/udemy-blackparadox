@@ -105,7 +105,7 @@ button:hover {
   overflow: hidden;
   position: relative;
   margin: 0 20px;
-  z-index: 200;
+  z-index: 50;
   background-image: url("../images/square_01.jpg");
   background-size: 100%;
   background-position: center center;
@@ -188,6 +188,21 @@ nav ul li a:hover:before {
 nav ul li a:hover:after {
   width: 100%;
   background: #060a0f;
+}
+
+.nav-overlay {
+  background: white;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(6, 10, 15, 0.1);
+}
+.nav-overlay .logo img {
+  width: 80%;
+}
+.nav-overlay ul {
+  margin-top: 8px;
+}
+.nav-overlay ul li a {
+  color: rgba(73, 73, 73, 0.5);
 }
 
 #slider {
