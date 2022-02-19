@@ -133,7 +133,7 @@
     </section>
 
     <!-- About us -->
-    <div class="pad_100" id="about">
+    <div class="pad_200" id="about">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -146,7 +146,9 @@
         <div class="row">
           <div class="d-flex align-items-center">
             <div class="col-xl-6">
-              <div class="diamond"></div>
+              <div class="diamond rounded-circle">
+                <!-- img bg -->
+              </div>
             </div>
 
             <div class="col-xl-6">
@@ -169,7 +171,7 @@
     </div>
 
     <!-- Services -->
-    <div class="pad_100">
+    <div class="pad_200">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -186,7 +188,7 @@
             <img
               src="images/square_03.jpg"
               alt="Eventos"
-              class="rounded-circle"
+              class="rounded-circle service-img"
             />
 
             <h2>Eventos</h2>
@@ -204,7 +206,7 @@
             <img
               src="images/square_02.jpg"
               alt="Bodas"
-              class="rounded-circle"
+              class="rounded-circle service-img"
             />
 
             <h2>Bodas</h2>
@@ -222,7 +224,7 @@
             <img
               src="images/square_10.jpg"
               alt="XV Años"
-              class="rounded-circle"
+              class="rounded-circle service-img"
             />
 
             <h2>XV Años</h2>
@@ -332,10 +334,16 @@
     <!-- Activation & scripts -->
     <script>
       $(document).ready(function () {
+        /* Slippry */
         $("#slippry").slippry({
           captions: false,
           pager: false,
         });
+
+        /* Img */
+        let dn_width = $(".diamond").width();
+
+        $(".diamond").css({ height: dn_width });
       });
     </script>
   </body>

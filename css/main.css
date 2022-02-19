@@ -62,14 +62,14 @@ button:hover {
   border: 1px solid #f60;
 }
 
-.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, .rounded-circle, a, input, select, textarea, option, button {
+.transitionSlow, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, .rhombus, .diamond, .service-img, a, input, select, textarea, option, button {
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-.padding_100 {
-  padding: 100px;
+.pad_200 {
+  padding: 200px 0px;
 }
 
 .center {
@@ -83,17 +83,33 @@ button:hover {
   color: #060a0f;
 }
 
-.rounded-circle {
+.service-img {
   width: 250px;
   height: 250px;
+}
+
+.rhombus, .diamond, .service-img {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
-.rounded-circle:hover {
+.rhombus:hover, .diamond:hover, .service-img:hover {
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
   -o-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.diamond {
+  display: block;
+  width: calc(100% - 40px);
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px;
+  z-index: 200;
+  background-image: url("../images/square_01.jpg");
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 nav {

@@ -67,8 +67,8 @@ button
     -o-transition: all .5s ease-in-out
     -webkit-transition: all .5s ease-in-out
 
-.padding_100
-    padding: 100px
+.pad_200
+    padding: 200px 0px
 
 .center
     text-align: center
@@ -79,9 +79,12 @@ button
     font-size: 60px
     color: $base
 
-.rounded-circle
+.service-img
     width: 250px
     height: 250px
+    @extend .rhombus
+
+.rhombus
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
     -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
     -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
@@ -91,6 +94,19 @@ button
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
         -o-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
         -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
+
+.diamond
+    display: block
+    width: calc(100% - 40px)
+    overflow: hidden
+    position: relative
+    margin: 0 20px
+    z-index: 200
+    background-image: url("../images/square_01.jpg")
+    background-size: 100%
+    background-position: center center
+    background-repeat: no-repeat
+    @extend .rhombus
 
 // Navbar
 nav
