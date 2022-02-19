@@ -62,7 +62,7 @@ button:hover {
   border: 1px solid #f60;
 }
 
-.transitionSlow, .social-networks li i, .social-networks li, .copy a, .tumblr, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, .rhombus, .diamond, .service-img, a, input, select, textarea, option, button {
+.transitionSlow, .grid-item:hover, .grid-item:before, .social-networks li i, .social-networks li, .copy a, .tumblr, nav ul li a:hover:after, nav ul li a:hover:before, nav ul li, nav ul .linkActive a:after, nav .logo img, nav, .rhombus, .diamond, .service-img, a, input, select, textarea, option, button {
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -144,7 +144,7 @@ nav ul {
   text-align: right;
 }
 nav ul .linkActive a {
-  color: #060a0f;
+  color: #060a0f !important;
 }
 nav ul .linkActive a:after {
   width: 100%;
@@ -343,4 +343,46 @@ footer hr {
   color: #060a0f;
   -webkit-transform: rotate(-45deg) translate(-3px, 3px);
   transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.grid {
+  width: 100%;
+  padding: 150px 0;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 20%;
+  padding-bottom: 20%;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  cursor: pointer;
+}
+.grid-item:before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30%;
+}
+.grid-item a img {
+  width: 100%;
+  height: auto;
+}
+.grid-item:hover:before {
+  background-color: rgba(255, 102, 0, 0.6);
+  background-image: url("../images/cross.png");
 }

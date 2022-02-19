@@ -1,10 +1,10 @@
-// Colors
+//////////////////////////////////////////////// Colors
 $base: #060a0f
 $sec: #494949
 $outline: #f60
 $text: transparentize($sec, .5)
 
-// General styles
+//////////////////////////////////////////////// General styles
 a
     margin: 0
     padding: 0
@@ -108,7 +108,7 @@ button
     background-repeat: no-repeat
     @extend .rhombus
 
-// Navbar
+//////////////////////////////////////////////// Navbar
 nav
     width: 100%
     padding: 10px 0
@@ -148,7 +148,8 @@ nav
 
         .linkActive
             a
-                color: $base
+                color: $base !important
+
                 &:after
                     width: 100%
                     background: $base
@@ -212,7 +213,7 @@ nav
             a
                 color: $text
 
-// Slider
+//////////////////////////////////////////////// Slider
 #slider
     backface-visibility: hidden
     -clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0 100%, 0 0)
@@ -249,7 +250,7 @@ nav
     .top_400
         top: 400px
 
-// Footer
+//////////////////////////////////////////////// Footer
 footer
     margin-top: -60px
     width: 100%
@@ -354,3 +355,49 @@ footer
                 -ms-transform: rotate(-45deg) translate(-3px , 3px)
                 -o-transform: rotate(-45deg) translate(-3px , 3px)
                 transform: rotate(-45deg) translate(-3px , 3px)
+
+//////////////////////////////////////////////// Portfolio
+.grid
+    width: 100%
+    padding: 150px 0
+
+    &:after
+        content: ""
+        display: block
+        clear: both
+
+.grid-item
+    width: 20%
+    padding-bottom: 20%
+    overflow: hidden
+    float: left
+    position: relative
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    -o-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    cursor: pointer
+
+    &:before
+        pointer-events: none
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 30%
+        @extend .transitionSlow
+
+    a
+        img
+            width: 100%
+            height: auto
+
+    &:hover
+        @extend .transitionSlow
+
+        &:before
+            background-color: transparentize($outline, .4)
+            background-image: url("../images/cross.png")
