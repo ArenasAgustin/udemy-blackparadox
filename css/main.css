@@ -386,3 +386,37 @@ footer hr {
   background-color: rgba(255, 102, 0, 0.6);
   background-image: url("../images/cross.png");
 }
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  margin-bottom: 150px;
+}
+#contact ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#contact ul li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#contact ul .google-maps {
+  width: 60%;
+  height: 100vh;
+  padding: 40px 20px;
+}
+#contact ul .google-maps div {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/maps.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#contact ul .form {
+  width: 40%;
+  height: 100vh;
+  padding: 40px 20px;
+}

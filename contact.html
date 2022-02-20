@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Blackparadox</title>
+    <title>Contacto - Blackparadox</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- Responsive -->
@@ -60,9 +60,6 @@
     />
     <link rel="icon" href="favicon/favicon.ico?v=2" type="image/x-icon" />
 
-    <!-- Slippry slider -->
-    <link rel="stylesheet" href="css/slippry.css" />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -71,7 +68,7 @@
   </head>
   <body>
     <!-- NavBar -->
-    <nav id="nav">
+    <nav id="nav" class="nav-overlay">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-3">
@@ -82,163 +79,41 @@
 
           <div class="col-xl-9">
             <ul>
-              <li class="linkActive"><a href="index.html">Inicio</a></li>
+              <li><a href="index.html">Inicio</a></li>
               <li><a href="index.html#about">Nosotros</a></li>
               <li><a href="portfolio.html">Portafolio</a></li>
-              <li><a href="contact.html">Contacto</a></li>
+              <li class="linkActive"><a href="contact.html">Contacto</a></li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Slider -->
-    <section id="slider">
-      <ul id="slippry">
-        <li>
-          <h3 class="left top_250 white_bg">Tus momentos más especiales</h3>
-          <p class="left top_300 white_bg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-            quod perferendis autem, similique in dolore!
-          </p>
-          <button class="left top_375 black">Escríbenos</button>
+    <!-- Contact -->
+    <div id="contact">
+     <ul>
+         <li class="google-maps">
+             <div>
+               <!-- img map -->
+             </div>
+         </li>
 
-          <img src="images/slide_01.jpg" alt="Este es un slide de Slippry" />
-        </li>
+         <li class="form">
+             <h3>Déjanos un mensaje</h3>
 
-        <li>
-          <h3 class="right top_250 white_bg">Lorem ipsum en tu evento</h3>
-          <p class="right top_300 white_bg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Asperiores, quasi aliquid suscipit excepturi vel amet neque sunt
-            doloribus et at!
-          </p>
-          <button class="right top_375 black">Escríbenos</button>
-          <img src="images/slide_02.jpg" alt="Este es un slide de Slippry" />
-        </li>
+             <form action="process/submit.php" method="POST">
+                 <input type="name" name="name" placeholder="Tu nombre">
 
-        <li>
-          <h3 class="left top_250 white_bg">
-            <strong>Blackparadox</strong> lorem ipsum
-          </h3>
-          <p class="left top_300 white_bg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-            provident odit magnam adipisci, omnis officia veniam aliquid fugiat
-            excepturi repellat nobis non, accusantium blanditiis inventore!
-          </p>
-          <button class="left top_400 black">Contáctanos</button>
-          <img src="images/slide_03.jpg" alt="Este es un slide de Slippry" />
-        </li>
-      </ul>
-    </section>
+                 <input type="email" name="email" placeholder="Tu email">
 
-    <!-- About us -->
-    <div class="pad_200" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="center main-title">Estos somos nosotros</h1>
-          </div>
-        </div>
+                 <input type="tel" name="tel" placeholder="Tu teléfono">
 
-        <br /><br /><br />
+                  <textarea name="message" placeholder="Tu mensaje..."></textarea>
 
-        <div class="row">
-          <div class="d-flex align-items-center">
-            <div class="col-xl-6">
-              <div class="diamond rounded-circle">
-                <!-- img bg -->
-              </div>
-            </div>
-
-            <div class="col-xl-6">
-              <h3>
-                <strong>Blackparadox</strong> <span>va a tus eventos</span>
-              </h3>
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                quod maxime error earum perspiciatis quis doloremque amet,
-                suscipit vitae, temporibus ipsam repellendus iusto magni optio
-                praesentium! Quisquam expedita dolorem totam!
-              </p>
-
-              <button>Contáctanos</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services -->
-    <div class="pad_200">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1 class="center main-title">Nuestros servicios</h1>
-
-            <h3 class="center">Capturamos tu <strong>vida</strong></h3>
-          </div>
-        </div>
-
-        <br /><br /><br />
-
-        <div class="row">
-          <div class="col-xl-4 center">
-            <img
-              src="images/square_03.jpg"
-              alt="Eventos"
-              class="rounded-circle service-img"
-            />
-
-            <h2>Eventos</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              impedit nesciunt placeat a eos! Aperiam pariatur voluptatibus
-              dolorum adipisci ullam?
-            </p>
-
-            <button>Leer más &raquo;</button>
-          </div>
-
-          <div class="col-xl-4 center">
-            <img
-              src="images/square_02.jpg"
-              alt="Bodas"
-              class="rounded-circle service-img"
-            />
-
-            <h2>Bodas</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              impedit nesciunt placeat a eos! Aperiam pariatur voluptatibus
-              dolorum adipisci ullam?
-            </p>
-
-            <button>Leer más &raquo;</button>
-          </div>
-
-          <div class="col-xl-4 center">
-            <img
-              src="images/square_10.jpg"
-              alt="XV Años"
-              class="rounded-circle service-img"
-            />
-
-            <h2>XV Años</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              impedit nesciunt placeat a eos! Aperiam pariatur voluptatibus
-              dolorum adipisci ullam?
-            </p>
-
-            <button>Leer más &raquo;</button>
-          </div>
-        </div>
-      </div>
+                  <button type="submit" name="submit" class="black">Enviar mensaje</button>
+             </form>
+         </li>
+     </ul>
     </div>
 
     <!-- Footer -->
@@ -327,36 +202,19 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Slider Slippry -->
+    <!-- JQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/js/slippry.min.js"></script>
 
     <!-- Activation & scripts -->
     <script>
       $(document).ready(function () {
-        /* Slippry */
-        $("#slippry").slippry({
-          captions: false,
-          pager: false,
-        });
-
         /* Img */
-        let dn_width = $(".diamond").width();
+        let dn_width = $(".grid-item").width();
 
-        $(".diamond").css({ height: dn_width });
-
-        /* Scroll */
-        $(window).scroll(function () {
-          let scroll = $(window).scrollTop();
-
-          if (scroll >= $("#about").offset().top - 300) {
-            $("#nav").addClass("nav-overlay");
-          } else {
-            $("#nav").removeClass("nav-overlay");
-          }
+        $(".grid-item").css({
+          height: dn_width,
+          "margin-top": -dn_width / 2 + 20,
         });
-
-        $(window).scroll();
       });
     </script>
   </body>
