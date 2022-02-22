@@ -1,55 +1,55 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    if (empty($_POST['nombre']) || empty($_POST['email']) || empty($_POST['mensaje'])) {
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message'])) {
         /* Some inputs are empty */
         header("Location: ../contacto.html?llena-todos-los-campos");
         exit();
     } else {
         /* form data */
-        $info['nombre'] = $_POST['nombre'];
+        $info[''] = $_POST['name'];
         $info['email'] = $_POST['email'];
-        $info['mensaje'] = $_POST['mensaje'];
+        $info['message'] = $_POST['message'];
         $info['ip'] = $_SERVER['REMOTE_ADDR'];
-        $info['telefono'] = $_POST['tel'];
+        $info['telephone'] = $_POST['tel'];
 
         if (empty($_POST['tel'])) {
-            $info['telefono'] = 'No ingresó número de teléfono';
+            $info['telephone'] = 'No ingresó número de teléfono';
         }
 
-        $info['fecha'] = date('d M Y H:i:s');
+        $info['date'] = date('d M Y H:i:s');
 
         /** Just to test locally **/
-        $mensaje = "
+        $menssage = "
             <html>
             <body>
             <h3>Tu mensaje ha sido enviado</h3>
-            <p><strong>Nombre:</strong> {$info['nombre']}</p>
+            <p><strong>Nombre:</strong> {$info['name']}</p>
             <p><strong>E-mail:</strong> {$info['email']}</p>
-            <p><strong>Teléfono:</strong> {$info['telefono']}</p>
-            <p><strong>Mensaje:</strong> {$info['mensaje']}</p>
+            <p><strong>Teléfono:</strong> {$info['telephone']}</p>
+            <p><strong>Mensaje:</strong> {$info['message']}</p>
             <br>
             <p><strong>IP: </strong> {$info['ip']}</p>
-            <p><strong>Fecha: </strong> {$info['fecha']}</p>
+            <p><strong>Fecha: </strong> {$info['date']}</p>
                 
             </body>
             </html>
             ";
 
         /** Send real email **/
-        $para = $info['email'];
-        $de = $info['email'];
+        $to = $info['email'];
+        $from = $info['email'];
 
-        $asunto = "Correo de Blackparadox - Blackparadox";
+        $topic = "Correo de Blackparadox - Blackparadox";
 
-        $headers = "From: $de\r\n";
+        $headers = "From: $from\r\n";
         $headers .= "MIME-Version: 1.0 \r\n";
         $headers .= "Content-type: text/html; charset=utf-8 \r\n";
 
         /* Send email */
-        $enviar = mail($para, $asunto, $mensaje, $headers);
+        $send = mail($to, $topic, $menssage, $headers);
 
-        if ($enviar) {
+        if ($send) {
             header("Location: ../contacto.html?success");
             exit();
         } else {
