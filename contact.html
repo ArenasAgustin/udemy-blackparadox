@@ -91,29 +91,40 @@
 
     <!-- Contact -->
     <div id="contact">
-     <ul>
-         <li class="google-maps">
-             <div>
-               <!-- img map -->
-             </div>
-         </li>
+      <ul>
+        <li class="google-maps">
+          <div>
+            <!-- img map -->
+          </div>
+        </li>
 
-         <li class="form">
-             <h3>Déjanos un mensaje</h3>
+        <li class="form">
+          <h3>Déjanos un mensaje</h3>
 
-             <form action="process/submit.php" method="POST">
-                 <input type="name" name="name" placeholder="Tu nombre">
+          <form method="POST" id="do_contact_form">
+            <input type="name" name="name" placeholder="Tu nombre" id="name" />
 
-                 <input type="email" name="email" placeholder="Tu email">
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu email"
+              id="email"
+            />
 
-                 <input type="tel" name="tel" placeholder="Tu teléfono">
+            <input type="tel" name="tel" placeholder="Tu teléfono" id="tel" />
 
-                  <textarea name="message" placeholder="Tu mensaje..."></textarea>
+            <textarea
+              name="message"
+              placeholder="Tu mensaje..."
+              id="message"
+            ></textarea>
 
-                  <button type="submit" name="submit" class="black">Enviar mensaje</button>
-             </form>
-         </li>
-     </ul>
+            <button type="submit" name="submit" class="black">
+              Enviar mensaje
+            </button>
+          </form>
+        </li>
+      </ul>
     </div>
 
     <!-- Footer -->
